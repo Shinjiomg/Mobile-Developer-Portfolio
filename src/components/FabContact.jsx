@@ -33,7 +33,7 @@ export default function FabContact() {
 
       {/* Action Sheet */}
       <div
-        class={`fixed left-0 right-0 bottom-0 z-50 transition-transform duration-300 ${
+        class={`fixed left-0 right-0 bottom-0 z-1000 transition-transform duration-300 ${
           open() ? "translate-y-0" : "translate-y-full"
         }`}
         style="will-change: transform;"

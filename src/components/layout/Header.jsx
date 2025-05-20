@@ -121,7 +121,7 @@ export default function Header() {
             </div>
 
             {/* Navegación Móvil */}
-            <nav class="fixed bottom-0 left-0 right-0 z-50 bg-neutral-900 border-t border-neutral-800 flex justify-around py-2 md:hidden">
+            <nav class="fixed bottom-0 left-0 right-0 z-1000 bg-neutral-900 border-t border-neutral-800 flex justify-around py-2 md:hidden">
                 {links.map((link) => (
                     <a 
                         href={link.href}

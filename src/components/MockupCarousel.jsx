@@ -192,7 +192,7 @@ export default function MockupCarousel() {
             outgoing().direction === 'next' ? 'animate-slide-out-right' : 'animate-slide-out-left'
           }`}
           style={`
-            z-index: 40;
+            z-index: 30;
             opacity: 1;
             box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
             transform:
@@ -216,7 +216,7 @@ export default function MockupCarousel() {
             incoming().direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'
           }`}
           style={`
-            z-index: 50;
+            z-index: 30;
             opacity: 1;
             box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
             transform:
@@ -238,7 +238,7 @@ export default function MockupCarousel() {
         <div
           class={`absolute transition-transform duration-700 ease-[cubic-bezier(.68,-0.55,.27,1.55)]`}
           style={`
-            z-index: 50;
+            z-index: 30;
             opacity: 1;
             box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
             transform:
