@@ -76,7 +76,7 @@ export default function Header() {
             {/* Toolbar superior solo mobile */}
             <div class="fixed top-0 left-0 right-0 z-50 bg-neutral-900 border-b border-neutral-800 flex items-center justify-between px-4 py-3 md:hidden">
                 <div class="flex items-center gap-2">
-                    <IconDeviceMobile class="text-blue-500" />
+                    <img src="logo.webp" alt="Logo" class="w-12 h-12" />
                     <span class="font-bold text-blue-500">Juan Cuellar</span>
                 </div>
                 <a
@@ -92,7 +92,7 @@ export default function Header() {
             <div class="w-full flex justify-center pt-6 fixed top-0 left-0 right-0 z-50 hidden md:flex">
                 <header class="backdrop-blur bg-[#27272B99]/70 rounded-full px-4 py-2 flex items-center gap-6 w-3/4 md:max-w-6xl 2xl:max-w-6xl mx-4">
                     <div class="flex items-center gap-2">
-                        <IconDeviceMobile class="text-blue-500" />
+                        <img src="logo.webp" alt="Logo" class="w-14 h-14" />
                         <span class="font-bold text-blue-500">Juan Cuellar</span>
                     </div>
                     <nav class="flex-1 flex items-center gap-6 justify-center">
