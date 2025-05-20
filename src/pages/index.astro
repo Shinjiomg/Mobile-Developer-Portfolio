@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import "../styles/global.css";
+import FabContact from "../components/FabContact.jsx";
+---
+
+<div class="bg-gray-900">
+	<Layout title="Juan Cuellar | Desarrollador Mobile" description="Desarrollador Mobile">
+		<div class="min-h-screen">
+			<Hero />
+			<FabContact client:only="solid" />
+		</div>
+	</Layout>
+</div>
+<script src="/src/assets/scripts/smooth-links.js" defer></script>
