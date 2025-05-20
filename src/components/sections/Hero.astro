@@ -1,6 +1,6 @@
 ---
-import PhoneMockup from "../PhoneMockup.jsx";
 import MockupCarousel from "../MockupCarousel.jsx";
+import ParallaxHeroWrapper from "./ParallaxHeroWrapper.jsx";
 const subtitle =
     "Desarrollando aplicaciones móviles nativas de alto rendimiento con Kotlin, Jetpack Compose y herramientas modernas.";
 ---
@@ -12,54 +12,71 @@ const subtitle =
     <div
         class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-16"
     >
-        <!-- Texto -->
-        <div class="flex-1 text-left animate-hero-fadein">
-            <h1
-                class="text-4xl md:text-5xl 2xl:text-6xl font-extrabold mb-3 leading-tight text-center md:text-left"
-            >
-                <span
-                    class="block bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-move animate-hero-title"
-                >
-                    Desarrollador Mobile
-                </span>
-                <span
-                    class="text-xl md:text-3xl 2xl:text-4xl text-white block animate-hero-subtitle"
-                >
-                    Creando Experiencias Nativas
-                </span>
-            </h1>
-            <p
-                class="text-base md:text-xl 2xl:text-2xl text-gray-200 mb-4 max-w-xl animate-hero-subtitle text-center md:text-left"
-            >
-                {subtitle}
-            </p>
-            <!-- Badges de tecnologías -->
-            <div class="flex gap-3 mb-8 justify-center md:justify-start">
-                <span
-                    class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30 animate-hero-badge"
-                    style="animation-delay:0.2s">Kotlin</span
-                >
-                <span
-                    class="bg-purple-600/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30 animate-hero-badge"
-                    style="animation-delay:0.4s">Jetpack Compose</span
-                >
-                <span
-                    class="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30 animate-hero-badge"
-                    style="animation-delay:0.6s">Android</span
-                >
-            </div>
-            <div class="flex gap-4 justify-center md:justify-start">
-                <a
-                    href="#projects"
-                    class="text-white font-semibold px-4 py-2 md:px-8 md:py-3 2xl:px-8 2xl:py-3 hover:scale-105 transition-all duration-300 border-2 border-blue-500/30 rounded-xl hero-btn-glow"
-                    >Ver Proyectos</a
-                >
-                <a
-                    href="#contact"
-                    class="text-white font-semibold px-4 py-2 md:px-8 md:py-3 2xl:px-8 2xl:py-3 border-2 bg-blue-500/30 border-blue-600 rounded-xl hover:bg-blue-500/40 hover:text-blue-100 hover:scale-105 transition-all duration-300 hero-btn-glow"
-                    >Contáctame &rarr;</a
-                >
-            </div>
+        <div class="flex-1">
+            <ParallaxHeroWrapper client:only="solid">
+                <!-- Texto -->
+                <div class="flex-1 text-left animate-hero-fadein">
+                    <h1
+                        class="text-4xl md:text-5xl 2xl:text-6xl font-extrabold mb-3 leading-tight text-center md:text-left"
+                    >
+                        <span
+                            class="block bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-move animate-hero-title"
+                        >
+                            Desarrollador Mobile
+                        </span>
+                        <span
+                            class="text-xl md:text-3xl 2xl:text-4xl text-white block animate-hero-subtitle"
+                        >
+                            Creando Experiencias Nativas
+                        </span>
+                    </h1>
+                    <p
+                        class="text-base md:text-xl 2xl:text-2xl text-gray-200 mb-4 max-w-xl animate-hero-subtitle text-center md:text-left"
+                    >
+                        {subtitle}
+                    </p>
+                    <!-- Badges de tecnologías -->
+                    <div
+                        class="flex gap-3 mb-8 justify-center md:justify-start"
+                    >
+                        <span
+                            class="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30 animate-hero-badge"
+                            style="animation-delay:0.2s">Kotlin</span
+                        >
+                        <span
+                            class="bg-purple-600/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30 animate-hero-badge"
+                            style="animation-delay:0.4s">Jetpack Compose</span
+                        >
+                        <span
+                            class="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30 animate-hero-badge"
+                            style="animation-delay:0.6s">Android</span
+                        >
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a
+                            href="#projects"
+                            class="text-white font-semibold px-4 py-2 md:px-8 md:py-3 2xl:px-8 2xl:py-3 hover:scale-105 transition-all duration-300 border-2 border-blue-500/30 rounded-xl hero-btn-glow"
+                            >Ver Proyectos</a
+                        >
+                        <a
+                            href="#contact"
+                            class="text-white font-semibold px-4 py-2 md:px-8 md:py-3 2xl:px-8 2xl:py-3 border-2 bg-blue-500/30 border-blue-600 rounded-xl hover:bg-blue-500/40 hover:text-blue-100 hover:scale-105 transition-all duration-300 hero-btn-glow"
+                            >Contáctame &rarr;</a
+                        >
+                    </div>
+                    <div
+                        class="hidden md:flex flex-col bg-neutral-800/80 border-l-4 border-blue-500 px-4 py-2 rounded-lg shadow max-w-md mt-4 animate-hero-subtitle"
+                    >
+                        <span class="text-gray-300 text-sm italic"
+                            >“Juan es un desarrollador que convierte ideas en
+                            apps increíbles, siempre con atención al detalle.”</span
+                        >
+                        <span class="block text-xs text-gray-500 mt-1"
+                            >— Cliente satisfecho</span
+                        >
+                    </div>
+                </div>
+            </ParallaxHeroWrapper>
         </div>
         <!-- Mockups -->
         <div
@@ -73,7 +90,19 @@ const subtitle =
             >
             </div>
         </div>
+        <div
+            class="flex md:hidden flex-col bg-neutral-800/80 border-l-4 border-blue-500 px-4 py-2 rounded-lg shadow max-w-md mt-4 mb-4 animate-hero-subtitle"
+        >
+            <span class="text-gray-300 text-sm italic"
+                >“Juan es un desarrollador que convierte ideas en apps
+                increíbles, siempre con atención al detalle.”</span
+            >
+            <span class="block text-xs text-gray-500 mt-1"
+                >— Cliente satisfecho</span
+            >
+        </div>
     </div>
+
     <div class="absolute left-1/2 bottom-14 -translate-x-1/2 mb-8 md:mb-0">
         <svg
             class="animate-bounce"
@@ -87,83 +116,96 @@ const subtitle =
             ><path d="M12 5v14M19 12l-7 7-7-7"></path></svg
         >
     </div>
-</section>
 
-<style>
-    @keyframes hero-fadein {
-        from {
-            opacity: 0;
-            transform: translateY(40px);
+    <style>
+        @keyframes hero-subtitle {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
         }
-        to {
-            opacity: 1;
-            transform: none;
+        @keyframes hero-fadein {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
         }
-    }
-    @keyframes hero-title {
-        from {
-            opacity: 0;
-            transform: translateY(-30px) scale(0.95);
+        @keyframes hero-title {
+            from {
+                opacity: 0;
+                transform: translateY(-30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
         }
-        to {
-            opacity: 1;
-            transform: none;
+        @keyframes hero-subtitle {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
         }
-    }
-    @keyframes hero-subtitle {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
+        @keyframes hero-badge {
+            0% {
+                opacity: 0;
+                transform: scale(0.7) translateY(10px);
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.1) translateY(-2px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
-        to {
-            opacity: 1;
-            transform: none;
+        @keyframes carousel-fadein {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
         }
-    }
-    @keyframes hero-badge {
-        0% {
-            opacity: 0;
-            transform: scale(0.7) translateY(10px);
+        .animate-hero-fadein {
+            animation: hero-fadein 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
         }
-        60% {
-            opacity: 1;
-            transform: scale(1.1) translateY(-2px);
+        .animate-hero-title {
+            animation: hero-title 1s 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+                both;
         }
-        100% {
-            opacity: 1;
-            transform: scale(1) translateY(0);
+        .animate-hero-subtitle {
+            animation: hero-subtitle 1s 0.3s
+                cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
         }
-    }
-    @keyframes carousel-fadein {
-        from {
-            opacity: 0;
-            transform: translateX(60px);
+        .animate-hero-badge {
+            animation: hero-badge 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+                both;
         }
-        to {
-            opacity: 1;
-            transform: none;
+        .animate-carousel-fadein {
+            animation: carousel-fadein 1s 0.2s
+                cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
         }
-    }
-    .animate-hero-fadein {
-        animation: hero-fadein 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
-    }
-    .animate-hero-title {
-        animation: hero-title 1s 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
-    }
-    .animate-hero-subtitle {
-        animation: hero-subtitle 1s 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-            both;
-    }
-    .animate-hero-badge {
-        animation: hero-badge 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
-    }
-    .animate-carousel-fadein {
-        animation: carousel-fadein 1s 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
-    }
-    .hero-btn-glow:hover {
-        box-shadow:
-            0 0 0 4px #2563eb33,
-            0 2px 16px 0 #2563eb44;
-        background: linear-gradient(90deg, #2563eb22 0%, #06b6d422 100%);
-    }
-</style>
+        .hero-btn-glow:hover {
+            box-shadow:
+                0 0 0 4px #2563eb33,
+                0 2px 16px 0 #2563eb44;
+            background: linear-gradient(90deg, #2563eb22 0%, #06b6d422 100%);
+        }
+    </style>
+</section>

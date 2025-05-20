@@ -257,7 +257,7 @@ export default function MockupCarousel() {
           </PhoneMockup>
           {/* Tooltip */}
           {hovered() === 0 && (
-            <div class="absolute left-1/2 -translate-x-1/2 -bottom-8 bg-neutral-900 text-white text-xs px-2 2xl:px-3 py-1 rounded-full shadow-lg border border-blue-700 animate-fadein-tooltip pointer-events-none">
+            <div class="md:block hidden absolute left-1/2 -translate-x-1/2 -bottom-8 bg-neutral-900 text-white text-xs px-2 2xl:px-3 py-1 rounded-full shadow-lg border border-blue-700 animate-fadein-tooltip pointer-events-none">
               {mockups[order()[0]].appName}
             </div>
           )}
