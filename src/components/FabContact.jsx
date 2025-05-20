@@ -16,7 +16,7 @@ export default function FabContact() {
     <>
       {/* FAB */}
       <button
-        class="fixed bottom-18 md:bottom-8 right-3 md:right-8 z-50 bg-blue-500 hover:bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition-all hover:scale-105 duration-300 hover:cursor-pointer"
+        class="fixed bottom-18 md:bottom-8 right-3 md:right-8 z-50 border border-blue-500/90 bg-blue-500/80 hover:bg-blue-600/80 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition-all hover:scale-105 duration-300 hover:cursor-pointer"
         onClick={handleFabClick}
         aria-label="Contacto rápido"
       >

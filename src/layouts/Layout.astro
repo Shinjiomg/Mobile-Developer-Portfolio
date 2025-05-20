@@ -1,13 +1,12 @@
 ---
 import Header from "../components/layout/Header.jsx";
-import Footer from "../components/layout/Footer.astro";
-
+import Footer from "../components/layout/Footer.jsx";
 interface Props {
 	title: string;
-	description: string;
+	description?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description = "Portfolio de desarrollo móvil" } = Astro.props;
 ---
 
 <!doctype html>
@@ -33,7 +32,7 @@ const { title, description } = Astro.props;
 	<body>
 		<slot />
 	</body>
-	<Footer />
+	<Footer client:only="solidjs" />
 
 	<style>
 		html,

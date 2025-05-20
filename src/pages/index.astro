@@ -3,13 +3,17 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/sections/Hero.astro";
 import "../styles/global.css";
 import FabContact from "../components/FabContact.jsx";
+import ScrollToTop from "../components/ScrollToTop.jsx";
+import Projects from "../components/sections/Projects.astro";
 ---
 
 <div class="bg-gray-900">
 	<Layout title="Juan Cuellar | Desarrollador Mobile" description="Desarrollador Mobile">
 		<div class="min-h-screen">
 			<Hero />
-			<FabContact client:only="solid" />
+			<FabContact client:only="solidjs" />
+			<ScrollToTop client:only="solidjs" />
+			<Projects />
 		</div>
 	</Layout>
 </div>
