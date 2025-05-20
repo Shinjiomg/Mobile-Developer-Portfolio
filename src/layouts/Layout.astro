@@ -15,11 +15,15 @@ const { title, description = "Portfolio de desarrollo móvil" } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{title + " | Desarrollador Mobile Junior"}</title>
 		<meta name="description" content={description} />
-		<meta name="author" content="Desarrollador Mobile" />
+		<meta name="author" content="Juan Pablo Cuellar" />
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
+		<meta
+			property="og:description"
+			content={description ||
+				"Juan Pablo Cuellar, desarrollador Android especializado en apps móviles modernas con Kotlin, Jetpack Compose y más."}
+		/>
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="es_ES" />
 		<meta name="robots" content="index, follow" />

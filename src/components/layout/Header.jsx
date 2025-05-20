@@ -82,7 +82,7 @@ export default function Header() {
                 <a
                     href="/cv.pdf"
                     download
-                    class="flex items-center gap-2 border-2 border-blue-600 text-blue-500 px-3 py-1 rounded-full font-semibold hover:bg-blue-500/10 hover:text-blue-500 transition-colors hover:scale-105 duration-300 text-sm"
+                    class="flex items-center gap-2 border-2 bg-blue-500/40 border-blue-600 text-white px-3 py-1 rounded-full font-semibold hover:bg-blue-500/10 hover:text-blue-500 transition-colors hover:scale-105 duration-300 text-sm"
                 >
                     <IconDownload size={18} />
                     Descargar CV
@@ -112,7 +112,7 @@ export default function Header() {
                     <a
                         href="/cv.pdf"
                         download
-                        class="flex items-center gap-2 border-2 border-blue-600 text-blue-500 px-4 py-1.5 rounded-full font-semibold hover:bg-blue-500/10 hover:text-blue-500 transition-colors hover:scale-105 duration-300"
+                        class="flex items-center gap-2 border-2 bg-blue-500/40 border-blue-600 text-white px-4 py-1.5 rounded-full font-semibold hover:bg-blue-500/30 hover:text-blue-200 transition-colors hover:scale-105 duration-300"
                     >
                         <IconDownload />
                         Descargar CV
