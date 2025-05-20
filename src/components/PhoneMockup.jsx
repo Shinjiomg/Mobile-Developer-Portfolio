@@ -21,7 +21,7 @@ export default function PhoneMockup(props) {
         {/* Tooltip/tag */}
         {props.appName && (
           <div class="absolute left-1/2 top-full mt-2 -translate-x-1/2 opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-200">
-            <span class="bg-neutral-800 text-white text-xs px-3 py-1 rounded-full shadow-lg border border-neutral-700">
+            <span class="bg-neutral-800 text-white text-xs px-2 py-1 rounded-full shadow-lg border border-neutral-700">
               {props.appName}
             </span>
           </div>
