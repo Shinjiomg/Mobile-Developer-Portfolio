@@ -1,14 +1,7 @@
 import {
-  IconHome,
-  IconCode,
-  IconUser,
   IconMail,
   IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandTwitter,
-  IconDeviceMobile,
-  IconBrandInstagram,
-  IconBrandFacebook,
+  IconBrandLinkedin
 } from "@tabler/icons-solidjs";
 import { createSignal, onMount } from "solid-js";
 const currentYear = new Date().getFullYear();

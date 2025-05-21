@@ -3,12 +3,39 @@ import MockupCarousel from "../MockupCarousel.jsx";
 import ParallaxHeroWrapper from "./ParallaxHeroWrapper.jsx";
 const subtitle =
     "Desarrollando aplicaciones móviles nativas de alto rendimiento con Kotlin, Jetpack Compose y herramientas modernas.";
+
+const testimonials = [
+    {
+        text: "Juan es un desarrollador que convierte ideas en apps increíbles, siempre con atención al detalle.",
+        author: "Cliente satisfecho",
+        role: "CEO, TechStart"
+    },
+    {
+        text: "Su experiencia en desarrollo móvil y su enfoque en la experiencia de usuario son excepcionales.",
+        author: "María Rodríguez",
+        role: "Product Manager, InnovApp"
+    },
+    {
+        text: "Un profesional que entrega resultados de alta calidad y siempre cumple con los plazos establecidos.",
+        author: "Carlos Méndez",
+        role: "CTO, MobileFirst"
+    }
+];
 ---
 
 <section
     class="min-h-screen flex items-center justify-center bg-black relative overflow-hidden pb-16"
     id="hero"
 >
+    <!-- Patrón SVG decorativo -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none select-none opacity-10" style="z-index:0;" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none">
+      <defs>
+        <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#38bdf8" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#dots)" />
+    </svg>
     <div
         class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-16 pt-20"
     >
@@ -52,28 +79,47 @@ const subtitle =
                             style="animation-delay:0.6s">Android</span
                         >
                     </div>
-                    <div class="flex gap-4 justify-center md:justify-start">
-                        <a data-scroll
-                            href="#projects"
-                            class="text-white font-semibold px-4 py-2 md:px-8 md:py-3 2xl:px-8 2xl:py-3 hover:scale-105 transition-all duration-300 border-2 border-blue-500/30 rounded-xl hero-btn-glow"
-                            >Ver Proyectos</a
-                        >
-                        <a data-scroll
-                            href="#contact"
-                            class="text-white font-semibold px-4 py-2 md:px-8 md:py-3 2xl:px-8 2xl:py-3 border-2 bg-blue-500/30 border-blue-600 rounded-xl hover:bg-blue-500/40 hover:text-blue-100 hover:scale-105 transition-all duration-300 hero-btn-glow"
-                            >Contáctame &rarr;</a
-                        >
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6 justify-center md:justify-start mt-2 w-full">
+                        <a href="#projects"
+                            class="flex items-center justify-center gap-2 text-white font-semibold text-base md:text-lg px-4 py-2.5 md:px-6 md:py-3 rounded-2xl border-2 border-blue-500/30 bg-black/40 shadow-lg w-full md:w-auto transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-blue-400 hover:shadow-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+                            Ver Proyectos
+                        </a>
+                        <a href="#contact"
+                            class="flex items-center justify-center gap-2 text-white font-semibold text-base md:text-lg px-4 py-2.5 md:px-6 md:py-3 rounded-2xl border-2 border-blue-500/30 bg-blue-500/30 shadow-lg w-full md:w-auto transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-cyan-400 hover:shadow-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 13 7 8"/><line x1="12" y1="13" x2="12" y2="3"/></svg>
+                            Contáctame
+                        </a>
                     </div>
                     <div
-                        class="hidden md:flex flex-col bg-neutral-800/80 border-l-4 border-blue-500 px-4 py-2 rounded-lg shadow max-w-md mt-4 animate-hero-subtitle"
+                        class="hidden md:flex bg-neutral-900/40 border border-gradient-to-b from-blue-500 to-cyan-400 px-6 py-7 rounded-2xl shadow-2xl max-w-lg mt-6 animate-hero-subtitle overflow-hidden relative backdrop-blur-md"
+                        style="backdrop-filter: blur(10px);"
                     >
-                        <span class="text-gray-300 text-sm italic"
-                            >“Juan es un desarrollador que convierte ideas en
-                            apps increíbles, siempre con atención al detalle.”</span
-                        >
-                        <span class="block text-xs text-gray-500 mt-1"
-                            >— Cliente satisfecho</span
-                        >
+                        <div class="flex flex-row items-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-400 flex-shrink-0 mr-3 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6zm6 0a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6z"/></svg>
+                            <div class="relative flex-1 min-w-0 min-h-[110px]">
+                                {testimonials.map((testimonial, index) => (
+                                    <div class={`testimonial-card absolute inset-0 w-full h-full flex flex-col justify-center transition-opacity duration-700 ease-in-out`}>
+                                        <p class="text-gray-200 text-base italic mb-2 text-left">
+                                            "{testimonial.text}"
+                                        </p>
+                                        <span class="block text-blue-400 font-bold text-base text-left">
+                                            {testimonial.author}
+                                        </span>
+                                        <span class="block text-xs text-gray-400 text-left">
+                                            {testimonial.role}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div class="absolute bottom-2 right-2 flex gap-1">
+                            {testimonials.map((_, index) => (
+                                <div class="testimonial-dot w-1.5 h-1.5 rounded-full bg-gray-600 transition-all duration-300"></div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </ParallaxHeroWrapper>
@@ -91,16 +137,33 @@ const subtitle =
             </div>
         </div>
         <div
-            class="flex md:hidden flex-col bg-neutral-800/80 border-l-4 border-blue-500 px-4 py-2 rounded-lg shadow max-w-md mt-4 mb-4 animate-hero-subtitle"
-        >
-            <span class="text-gray-300 text-sm italic"
-                >“Juan es un desarrollador que convierte ideas en apps
-                increíbles, siempre con atención al detalle.”</span
-            >
-            <span class="block text-xs text-gray-500 mt-1"
-                >— Cliente satisfecho</span
-            >
+        class="md:hidden flex bg-neutral-900/40 border-l-4 border-gradient-to-b from-blue-500 to-cyan-400 px-6 py-7 rounded-2xl shadow-2xl w-full mt-6 animate-hero-subtitle overflow-hidden relative backdrop-blur-md"
+        style="backdrop-filter: blur(10px);"
+    >
+        <div class="flex flex-row items-start w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-400 flex-shrink-0 mr-3 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6zm6 0a4 4 0 0 1 4-4V7a4 4 0 0 0-4 4v6z"/></svg>
+            <div class="relative flex-1 min-w-0 min-h-[90px]">
+                {testimonials.map((testimonial, index) => (
+                    <div class={`testimonial-card absolute inset-0 w-full h-full flex flex-col justify-center transition-opacity duration-700 ease-in-out`}>
+                        <p class="text-gray-200 text-base italic mb-2 text-left">
+                            "{testimonial.text}"
+                        </p>
+                        <span class="block text-blue-400 font-bold text-base text-left">
+                            {testimonial.author}
+                        </span>
+                        <span class="block text-xs text-gray-400 text-left">
+                            {testimonial.role}
+                        </span>
+                    </div>
+                ))}
+            </div>
         </div>
+        <div class="absolute bottom-2 right-2 flex gap-1">
+            {testimonials.map((_, index) => (
+                <div class="testimonial-dot w-1.5 h-1.5 rounded-full bg-gray-600 transition-all duration-300"></div>
+            ))}
+        </div>
+    </div>
     </div>
 
     <div class="absolute left-1/2 bottom-14 -translate-x-1/2 mb-8 md:mb-0">
@@ -206,6 +269,72 @@ const subtitle =
                 0 0 0 4px #2563eb33,
                 0 2px 16px 0 #2563eb44;
             background: linear-gradient(90deg, #2563eb22 0%, #06b6d422 100%);
+        }
+        @keyframes slideTestimonials {
+            0%, 30% {
+                transform: translateY(0);
+            }
+            33%, 63% {
+                transform: translateY(-100%);
+            }
+            66%, 96% {
+                transform: translateY(-200%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .testimonials-slider {
+            animation: slideTestimonials 15s infinite;
+        }
+        .testimonial-card {
+            opacity: 0;
+            z-index: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            transition: opacity 0.7s cubic-bezier(0.68,-0.55,0.27,1.55), transform 0.7s cubic-bezier(0.68,-0.55,0.27,1.55);
+        }
+        .testimonial-card:nth-child(1) {
+            animation: showTestimonialCard 15s infinite;
+        }
+        .testimonial-card:nth-child(2) {
+            animation: showTestimonialCard 15s infinite 5s;
+        }
+        .testimonial-card:nth-child(3) {
+            animation: showTestimonialCard 15s infinite 10s;
+        }
+        @keyframes showTestimonialCard {
+            0%, 30% {
+                opacity: 1;
+                z-index: 10;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+            33%, 100% {
+                opacity: 0;
+                z-index: 0;
+                pointer-events: none;
+                transform: translateY(20px);
+            }
+        }
+        .testimonial-dot:nth-child(1) {
+            animation: dotPulse 15s infinite;
+        }
+        .testimonial-dot:nth-child(2) {
+            animation: dotPulse 15s infinite 5s;
+        }
+        .testimonial-dot:nth-child(3) {
+            animation: dotPulse 15s infinite 10s;
+        }
+        @keyframes dotPulse {
+            0%, 30% {
+                background-color: #3b82f6;
+                transform: scale(1.2);
+            }
+            33%, 100% {
+                background-color: #4b5563;
+                transform: scale(1);
+            }
         }
     </style>
 </section>
